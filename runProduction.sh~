@@ -1,0 +1,42 @@
+#!/bin/bash
+
+list="
+HZZ4lTree_powheg15jhuGenV3H126
+HZZ4lTree_jhuGenV3Grav2MHH126
+HZZ4lTree_jhuGenV3qqGravH126
+HZZ4lTree_jhuGenV3Grav2PBH126
+HZZ4lTree_jhuGenV3Grav2PHH126
+HZZ4lTree_jhuGenV3GravPMH126
+"
+#Graviton2PH2ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#Graviton2PH3ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#Graviton2PH6ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#Graviton2PH7ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#Graviton2MH10ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#Graviton2MH9ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2BPToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2HMToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2HPToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2PH2ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2PH3ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2PH6ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2PH7ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2MH10ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+#qqbar_Graviton2MH9ToZZTo4L_M-125p6_8TeV-JHUGenV3_false_2e2mu
+
+
+#for i in `ls inputTrees/8TeV/2e2mu/`; do echo ${i/".root"/""}; done
+
+
+for i in $list;
+do
+root -b addProbToTree.C"(\"${i}\", 3, 25000, 8, \"2e2mu\")" > logFiles/$i.txt &
+done
+
+#/opt/exp_soft/cms/t3/t3submit -k oe -d $PWD -q llr -v SAMPLE=${i} -N ${i} job.sh
+#root -b addProbToTree.C"(\"${i/".root"/""}\", 3, 100000, 8)" << EOF
+#.q
+#EOF
+
+#root -b addProbToTree.C"(\"ggtoHtoZZ4l_VariousKDs_0+m\", 3, 50000, 8, \"2e2mu\")" > logFiles/ggtoHtoZZ4l_VariousKDs_0+m.txt &
+#root -b addProbToTree.C"(\"HZZ4lTree_jhuGenV3GravPMH126\", 3, 15000, 8, \"2e2mu\")"

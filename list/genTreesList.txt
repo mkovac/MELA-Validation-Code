@@ -1,0 +1,16 @@
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/ggtoHtoZZ4l_VariousKDs_0+m.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/Graviton2PH2ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/Graviton2PH3ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/Graviton2PH6ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/Graviton2PH7ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/Graviton2MH10ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/Graviton2MH9ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2BPToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2HMToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2HPToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2PH2ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2PH3ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2PH6ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2PH7ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2MH10ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
+/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/inputTrees/8TeV/all/qqbar_Graviton2MH9ToZZTo4L_M-125p6_8TeV-JHUGenV3_false.root
