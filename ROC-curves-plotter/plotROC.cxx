@@ -78,8 +78,8 @@ TString legendLabel[10] =
 
 TString legendLabel_pid[10] =
 {
-	"J^{P} = 2^{+}_{m} dec",
-	"J^{P} = 2^{+}_{b} dec",
+   "J^{P} = 2^{+}_{m} dec",
+   "J^{P} = 2^{+}_{b} dec",
 	"J^{P} = 2^{+}_{h} dec",
 	"J^{P} = 2^{+}_{h 2} dec",
 	"J^{P} = 2^{+}_{h 3} dec",
@@ -435,22 +435,22 @@ void plot( models myModel )
       legend_all->AddEntry(JHUGenPidKD_ROC, "PID JHUGen MELA "   + channel[c], "l");
       legend_all->AddEntry(ANA_PidKD_ROC, "PID Analytical MELA " + channel[c], "l");
 		
-		cROC_all->cd();
+      cROC_all->cd();
       KD_Multi_all->Draw("ac");
-		KD_Multi_all->GetXaxis()->SetLimits(0., 1.);
+      KD_Multi_all->GetXaxis()->SetLimits(0., 1.);
 		cROC_all->Modified();
       legend_all->Draw();
       cROC_all->SaveAs(plots + channel[c] + "/" + usedSample + "_" + ALT_variable[myModel] + "_all_" + channel[c] + ".png");
-		cROC_all->SaveAs(plots + channel[c] + "/" + usedSample + "_" + ALT_variable[myModel] + "_all_" + channel[c] + ".pdf");
+      cROC_all->SaveAs(plots + channel[c] + "/" + usedSample + "_" + ALT_variable[myModel] + "_all_" + channel[c] + ".pdf");
 		
-		delete hSM_KD_ANA;
-		delete hSM_KD_VA;
-		delete hAltKD_ANA;
-		delete hAltKD_VA;
-		delete hSM_PidKD_ANA;
-		delete hSM_PidKD_VA;
-		delete hAltPidKD_ANA;
-		delete hAltPidKD_VA;
+      delete hSM_KD_ANA;
+      delete hSM_KD_VA;
+      delete hAltKD_ANA;
+      delete hAltKD_VA;
+      delete hSM_PidKD_ANA;
+      delete hSM_PidKD_VA;
+      delete hAltPidKD_ANA;
+      delete hAltPidKD_VA;
  
 	} // End for channel
 } // End main
