@@ -10,21 +10,26 @@
 #include "TText.h"
 #include "TGraph.h"
 #include "TMultiGraph.h"
+#include <TSystem.h>
 #include "TLegend.h"
+
+#include <Riostream.h>
 #include <sstream>
 #include <vector>
-#include <Riostream.h>
 #include <utility>
 
+// Parameters to be changed by the user
 bool tuned = 1;
 bool is_gg = 0;
 
+// mkdir commands
+TString mkdirMinusP = "mkdir -p ";
+TString mkdir = "mkdir ";
 
-// Set paths to input files
-//TString filePath7TeV = "/data_CMS/cms/common/StatTreesCJLST/prodIndependent/PRODFSR/";
-
+// Models
 enum models { p2mPlus, p2bPlus, p2hPlus, p2h2Plus, p2h3Plus, p2h6Plus, p2h7Plus, p2hMinus, p2h9Minus, p2h10minus, numOfModels };
 
+// Channels
 TString channel[3] = { "4e", "4mu", "2e2mu" };
 
 TString sample_gg[10] =
@@ -149,15 +154,19 @@ void plot( models myModel )
 	{
 		TString filePath8TeV = "/home/llr/cms/kovac/CMS/Analysis/SpinParity/Validation/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/output-trees/8TeV/tuned/no-cuts/";
 		TString plots = "plots/8TeV/tuned/no-cuts/";
-//		TString plots = "test/";
-		
-		const int n = 100;
+      
+      cout << "[INFO] Creating directory for plots..." << endl;
+      gSystem->Exec( mkdirMinusP + plots );
+      for ( int dir = 0; dir < 3; dir++  )
+      {
+         gSystem->Exec( mkdir + plots + channel[k] );
+      }
+      
+      const int n = 100;
 		float mzz_low = 120.;
 		float mzz_high = 130.;
 		float low = 0;
-		
-//		cout << "here" << endl;
-	}
+   }
 	else
 	{
 		TString filePath8TeV = "/home/llr/cms/kovac/CMS/Analysis/SpinParity/MELA/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/outputTreesNoTuning/8TeV";
@@ -175,7 +184,6 @@ void plot( models myModel )
 	double SM_JHUGenKD, AltJHUGenKD, SM_AnaKD, AltAnaKD;
 	double SM_JHUGenPidKD, AltJHUGenPidKD, SM_AnaPidKD, AltAnaPidKD;
 
-	
 	// Arrays for Graphing
 	float SM_JHUGenKD_Eff[n], AltJHUGenKD_Eff[n], SM_AnaKD_Eff[n], AltAnaKD_Eff[n];
 	float SM_JHUGenPidKD_Eff[n], AltJHUGenPidKD_Eff[n], SM_AnaPidKD_Eff[n], AltAnaPidKD_Eff[n];
