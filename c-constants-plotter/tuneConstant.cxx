@@ -1,5 +1,3 @@
-#include <algorithm>
-
 // ROOT includes
 #include "TROOT.h"
 #include "TChain.h"
@@ -9,15 +7,20 @@
 #include "TDirectory.h"
 #include "TLorentzVector.h"
 #include "TMath.h"
+#include "TSystem.h"
 //#include "RooFit.h"
 
 // C++ includes
 #include <fstream>
 #include <sstream>
 #include <iostream>
-#include "map"
+#include <algorithm>
 
 bool tuned = true;
+
+// mkdir commands
+TString mkdirMinusP = "mkdir -p ";
+TString mkdir = "mkdir ";
 
 enum model { p2mplus, p2hplus, p2hminus, p2bplus, p2h2plus, p2h3plus, p2h6plus, p2h7plus, p2h9minus, p2h10minus, numOfModels };
 //enum model { p2h2plus, p2h3plus, p2h6plus, p2h7plus, p2h9minus, p2h10minus, numOfModels };
@@ -320,8 +323,11 @@ void doCalculation( model myModel )
 	{
 		TString inputDir = "/home/llr/cms/kovac/CMS/Analysis/SpinParity/Validation/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/output-trees/8TeV/tuned/cuts/";
 		TString saveString = "plots/8TeV/tuned/cuts";
+
+      cout << "[INFO] Creating directory for plots..." << endl;
+      gSystem->Exec( mkdirMinusP + saveString );
 		
-		for ( int j = 0; j < 20; j++ )
+      for ( int j = 0; j < 20; j++ )
 		{
 			bins[j] = "(5000, -10, 10)";
 			bins_pid[j] = "(5000, -10, 10)";
@@ -331,6 +337,9 @@ void doCalculation( model myModel )
 	{
 		TString inputDir = "/home/llr/cms/kovac/CMS/Analysis/SpinParity/Validation/CMSSW_5_3_9/src/ZZMatrixElement/MELA/test/Validation/output-trees/8TeV/not-tuned/cuts/";
 		TString saveString = "plots/8TeV/not-tuned/cuts";
+      
+      cout << "[INFO] Creating directory for plots..." << endl;
+      gSystem->Exec( mkdirMinusP + saveString );
 	}
 	
 	
